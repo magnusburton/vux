@@ -4,7 +4,7 @@
 			<icon v-show="isFirst && $parent.isShowIcon" type="success_no_circle" class="vux-timeline-item-checked"></icon>
 		</div>
 		<div class="vux-timeline-item-tail" :style="tailStyle"></div>
-		<div class="vux-timeline-item-content">
+		<div class="vux-timeline-item-content" v-bind:style="{ 'padding-bottom': isLast && '0'}">
 			<slot></slot>
 		</div>
 	</li>
@@ -42,4 +42,3 @@ export default {
   }
 }
 </script>
-
